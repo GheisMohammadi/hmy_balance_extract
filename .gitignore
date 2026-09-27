@@ -1,0 +1,36 @@
+# Private chain data, reviewed policy, team results and generated evidence.
+/artifacts/*
+!/artifacts/README.md
+/data/
+/bin/
+/dist/
+*.csv
+*.csv.gz
+*.tar
+*.tar.gz
+*.tgz
+*.ldb
+*.sst
+*.log
+*.partial
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Authentication material and local operational configuration.
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+.ssh/
+.teleport/
+
+# Full-run evidence and operational metadata.
+/run.json
+/run.lock
+/state/
+/receipts.json

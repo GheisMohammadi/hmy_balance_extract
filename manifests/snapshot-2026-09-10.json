@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "cutoff": {
+    "requested_time_utc": "2026-09-10T14:00:00Z",
+    "shard0": {
+      "block": 93623067,
+      "timestamp_utc": "2026-09-10T14:00:00Z",
+      "hash": "0x23572e11f6ef9afe4c27ab3102f15b99fd7277ae5f685ccaef0ae571fe7ee0b6",
+      "state_root": "0x5e1927beb00c17c341d02483fbe81a884cc45af1ecfb673366e685aca4632ec3"
+    },
+    "shard1": {
+      "block": 95882100,
+      "timestamp_utc": "2026-09-10T13:59:59Z",
+      "selection": "last block at or before requested cutoff",
+      "hash": "0xf801577a5480175c05a63c8e4e5cf3d2623e1a01bdf176e16b46967405ae02ee",
+      "state_root": "0x312a34c0254608c59013bc967c486fe036b784e0d2012b266d5fa4ecc2531760"
+    }
+  },
+  "valuation": {
+    "usd_per_one": "0.00074801",
+    "reference_shard0_block": 93448483,
+    "note": "Used for historical reporting only; public eligibility is ONE-denominated."
+  },
+  "publication_hold": {
+    "status": "withheld_pending_independent_reproduction_and_first_public_results_article",
+    "withheld_fields": [
+      "result row and population counts",
+      "total-claim, wallet-airdrop, and staked-to-vault amounts",
+      "eligibility and treasury-routing breakdowns",
+      "exchange wallet inventories, destinations, memos, and address outcomes",
+      "generated-output hashes",
+      "observed verification counts"
+    ]
+  },
+  "eligibility_1000_one": {
+    "threshold_atto": "1000000000000000000000",
+    "field": "qualification_total_atto",
+    "formula": "native_total_claim_atto + wone_balance_atto",
+    "equality_policy": "include",
+    "selected_comparison": "greater-than-or-equal"
+  },
+  "wone_overlay": {
+    "contract": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+    "source_shard": 0,
+    "holder_source": "cutoff-pinned archival-node event replay reconciled to totalSupply and native reserve",
+    "qualified_holder_treatment": "wallet delivery for ordinary-threshold rows plus every confirmed exchange wallet delivered manually from the 2050 supply reserve, with matching reserve source classified as redistributed",
+    "remainder_treatment": "not issued; retained in the 2050 premint reserve",
+    "self_held_wone": "excluded from recipient delivery"
+  },
+  "selected_policy": {
+    "threshold": "native_total_claim_atto + wone_balance_atto >= 1000 ONE",
+    "threshold_timing": "evaluate snapshot qualification before deductions or routing",
+    "initial_stage": "positive eligible wallets with indexed activity in the six calendar months before cutoff",
+    "exchange_manual_stage": "every positive native ONE, WONE, and delegated entitlement in a confirmed exchange inventory is excluded from the airdrop and delivered manually from the 2050 supply reserve to the exchange's confirmed destination(s); no individual threshold or activity gate; issuance_treatment manual_from_reserve; delegated principal released from the validator vaults",
+    "code_bearing_accounts": "preliminary review; verified validator-wrapper accounts remain key-controlled wallets",
+    "reviewed_contracts": "multisig, LayerZero collateral, and 1wallet allocations are next stage; SmartVault and other reviewed genuine-contract allocations are not issued",
+    "stage_and_treatment": "migration stage, issuance treatment, account classification, and destination readiness are separate fields",
+    "excluded_addresses": [
+      "0x000000000000000000000000000000000000dEaD",
+      "0x7bDeF7Bdef7BDeF7BDEf7bDef7bdef7bdeF6E7AD"
+    ]
+  },
+  "exchange_delivery_overlay": {
+    "policy": "exchanges/exchange-policy.json",
+    "delivery": "manual_from_reserve for every exchange: the complete cutoff entitlement (native ONE, WONE, delegated principal) is delivered by hand from the year 2050 supply reserve and never enters the airdrop",
+    "destination_modes": {
+      "aggregate": "every component to one confirmed destination",
+      "aggregate_split": "wallet components (liquid, pending cross-shard, WONE) to a wallet destination and staking components (delegated principal, pending undelegation, unclaimed reward) to a staking destination; roles are named explicitly in the destination file",
+      "same_address": "each source wallet receives its own entitlement at its own address",
+      "tiered": "wallets meeting the initial distribution criteria (inclusive threshold and six-month indexed activity) receive their entitlement at their own addresses; every other wallet is aggregated to the confirmed destination"
+    },
+    "threshold_overlap": "removed from implicit automatic same-address delivery only; not an entitlement calculation",
+    "missing_destination": "hold with no source-address fallback",
+    "submitted_balance_role": "reconciliation evidence only; never a replacement for cutoff chain accounting"
+  },
+  "excluded_uncertainty": {
+    "category": "retired-shard receipts",
+    "count_and_amount": "withheld",
+    "reason": "Destination spent status on retired shards 2 and 3 is not provable from the active shard databases; excluded to avoid double counting."
+  },
+  "verification": {
+    "methods": [
+      "independent state traversal",
+      "canonical interval audit",
+      "historical RPC comparison",
+      "creation-transition tracing",
+      "exchange normalization, overlap, signature, and route closure checks",
+      "strict claim verification",
+      "cross-component reconciliation"
+    ],
+    "observed_results": "withheld"
+  },
+  "source_dependencies": {
+    "harmony_revision": "8292e786db513186faff5b397fdf864c0c189ac1",
+    "mcl_revision": "ac6b73317f5321b33fc877a4dd7218e1815693d8",
+    "bls_revision": "2b7e49894c0f15f5c40cf74046505b7f74946e52",
+    "go": "1.24.2",
+    "go_ethereum_effective_version": "v1.11.2"
+  }
+}

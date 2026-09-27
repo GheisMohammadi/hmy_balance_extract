@@ -1,0 +1,13 @@
+Harmony independent balance extraction and recomputation
+
+Files derived from harmony-migration, including the cutoff manifest, are
+licensed under LGPL-3.0; see LICENSE.
+
+The extractor does not import Harmony, go-ethereum, or migration-pipeline code.
+It independently implements the Harmony-compatible RLP, state-trie and receipt
+formats. Runtime dependencies are GoLevelDB and golang.org/x/crypto (Keccak),
+plus their indirect dependencies, under their respective licenses.
+
+The manifest's source_dependencies section records the reference migration
+pipeline's environment for comparison; it is not this project's build recipe.
+This project's actual Go dependencies are pinned in extractor/go.mod and go.sum.
