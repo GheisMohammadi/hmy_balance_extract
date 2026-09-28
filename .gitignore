@@ -1,7 +1,7 @@
 # Private chain data, reviewed policy, team results and generated evidence.
 /artifacts/*
 !/artifacts/README.md
-/data/
+# /data/ reserved; comparison snapshots are tracked below
 /bin/
 /dist/
 *.csv
@@ -34,3 +34,8 @@ secrets.json
 /run.lock
 /state/
 /receipts.json
+
+# Independent comparison snapshots (Git LFS).
+!/data/
+!/data/**
+!/README-redacted.md

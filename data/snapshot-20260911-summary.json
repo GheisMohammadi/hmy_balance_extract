@@ -1,0 +1,134 @@
+{
+  "activity_collected": false,
+  "component_sums_atto": {
+    "delegated_atto": "3368012228000012913780233311",
+    "liquid_shard0_atto": "15137544279780156106724507205",
+    "liquid_shard1_atto": "33587583102198735513445632",
+    "pending_undelegation_atto": "294885992847584499900000000",
+    "self_stake_atto": "19203265748536335453881422",
+    "unclaimed_reward_atto": "166591009311951352073419298",
+    "wone_balance_atto_excluding_dust": "91259232008350250909158721"
+  },
+  "cutoff": {
+    "shard0": {
+      "block": 93623067,
+      "hash": "0x23572e11f6ef9afe4c27ab3102f15b99fd7277ae5f685ccaef0ae571fe7ee0b6"
+    },
+    "shard1": {
+      "block": 95882100,
+      "hash": "0xf801577a5480175c05a63c8e4e5cf3d2623e1a01bdf176e16b46967405ae02ee"
+    }
+  },
+  "cutoff_time_utc": "2026-09-10T14:00:00Z",
+  "full_snapshot": {
+    "bytes": 389151895,
+    "path": "full-snapshot-20260911.csv",
+    "rows": 1764736,
+    "sha256": "a0db8b62c5180640bf0c8e8b3222c263326e1d395b53b620392ab0d8173bd1c3"
+  },
+  "inputs": {
+    "shard0_accounts": {
+      "role": "nonce and code only; balances come from the component files",
+      "rows": 3258622,
+      "sha256": "bfa8c1122c0fd256c50fe4d04d058677a2ce99165b266ca7afc2ae7d75ea2434"
+    },
+    "shard0_liquid": {
+      "blank_address_rows": 157521,
+      "rows": 1912297,
+      "sha256": "d3756c6f849d9847ad63545a74897429751935075cfa5be2f4ce823d029b9874"
+    },
+    "shard1_accounts": {
+      "rows": 2951,
+      "sha256": "890deb4353f231d2f2bab009f77fb431761050a79d62f2140cf1286d0b23e678"
+    },
+    "shard1_liquid": {
+      "rows": 2392,
+      "sha256": "b3ef5e3cef265174d29fe0ca3f8b5989ed58fb96a94f84b58f9fdfddc5b97cdc"
+    },
+    "staking_components": {
+      "rows": 37307,
+      "sha256": "fc70e01bba4904b9a1be3138a0134a3585d69501b2244dcf0d88d60dff6643f7"
+    },
+    "unresolved_positive_liquid": {
+      "rows": 157521,
+      "sha256": "834d9e2f39fed7828bd020d84ebb368a9a224a0eff6a924cd351a51d6331f490"
+    },
+    "validator_addresses": {
+      "role": "same-cutoff validator identities only; amounts not used",
+      "rows": 157443,
+      "sha256": "e3038ab2745977ba6dd64e57aa1a07abde9a0678f4b45497a8749aabe5774427"
+    },
+    "wone_holders": {
+      "rows": 3985171,
+      "sha256": "39c94903eba5d408f58f2839b5794c221cc0df4f972bd50bfa45c9b86b2d154f"
+    }
+  },
+  "limits": {
+    "exchange_classification": "not applied",
+    "incident_and_contract_policy": "not applied; special_label and non_issuing fields are blank",
+    "last_transaction_dates": "not collected",
+    "pending_cross_shard": "not measured; receipt verification stopped on an incoming-root mismatch at shard 0 block 859305 and shard 1 block 818062. The field is blank. native_total_atto and total_balance_atto do not include it.",
+    "qualification": "native components plus WONE, without unmeasured pending transfers",
+    "unresolved_addresses": "positive shard-0 liquid without an address preimage is omitted from the address rows and reported here",
+    "wone_only_ledger": "WONE-only rows at or above 1000 ONE; confirmed exchanges below that line are not separately classified"
+  },
+  "qualified_rows_measured": 71178,
+  "reconciliation": {
+    "active_stake_atto": {
+      "expected": "3387215493748549249234114733",
+      "value": "3387215493748549249234114733"
+    },
+    "shard0_liquid_atto": {
+      "expected": "15169184564927334589013587086",
+      "value": "15169184564927334589013587086"
+    },
+    "shard1_liquid_atto": {
+      "expected": "33587583102198735513445632",
+      "value": "33587583102198735513445632"
+    },
+    "wone_holder_sum_atto": {
+      "expected": "91259232008350250919087005",
+      "value": "91259232008350250919087005"
+    }
+  },
+  "row_counts": {
+    "contracts_in_rows": 9542,
+    "rows_at_least_10_one": 390572,
+    "rows_at_least_1_one": 700783,
+    "rows_full": 1764736,
+    "rows_native_ledger": 1759166,
+    "rows_wone_census": 5158,
+    "rows_wone_only_ledger": 412,
+    "validators_in_rows": 719,
+    "validators_registered": 771
+  },
+  "snapshot": {
+    "bytes": 65866504,
+    "path": "snapshot-20260911.csv",
+    "rows": 700783,
+    "sha256": "a0fbdee98052c9b10d6e2a578f016efe3400f4a398af4782b757aa94f3926e05"
+  },
+  "snapshot_breakdown": {
+    "bytes": 84125059,
+    "path": "snapshot-breakdown-20260911.csv",
+    "rows": 700783,
+    "sha256": "bdf4594f05938565335f91486a831b7598c78e64ab7c6b79d9fe0b2b106cd8b4"
+  },
+  "snapshot_small": {
+    "bytes": 37003207,
+    "minimum_total_balance_one": 10,
+    "path": "snapshot-20260911-small.csv",
+    "rows": 390572,
+    "sha256": "60852ac67cd0c2ee9742f5badc395e2d6e666ead4c0b4d73bda35f196ba888c7"
+  },
+  "unresolved_positive_liquid_shard0": {
+    "atto": "31640285147178482289079881",
+    "rows": 157521
+  },
+  "wone_dust": {
+    "atto_excluded": "9928284",
+    "rows_excluded": 3969823,
+    "rule": "WONE-only below 10 atto excluded"
+  },
+  "wone_native_backing_equals_holder_sum": true
+}
